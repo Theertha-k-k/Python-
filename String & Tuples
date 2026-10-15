@@ -1,0 +1,73 @@
+Python 3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+a="Enter your Name:"
+b="Zara"
+a+" "+b
+'Enter your Name: Zara'
+c="Hello"
+c+" "+b
+'Hello Zara'
+d= "Hello Zara"
+e=", welcome to Python Programming"
+d+e
+'Hello Zara, welcome to Python Programming'
+# String slicing
+z= "Hello Zara, welcome to Python Programming"
+# first character of the string
+z[0]
+'H'
+# last character of the string
+z[-1]
+'g'
+# the first 5 characters
+z[:5]
+'Hello'
+# last 11 characters
+z[-11:]
+'Programming'
+# string in reverse
+z[::-1]
+'gnimmargorP nohtyP ot emoclew ,araZ olleH'
+# slice the word python
+z[22:29]
+' Python'
+
+# String methods
+strM = "Python beginner tutirial"
+# uppercase
+strM = "Python beginner tutorial"
+strM.upper()
+'PYTHON BEGINNER TUTORIAL'
+# lowercase
+strM.lower()
+'python beginner tutorial'
+
+strM.capitalize()
+'Python beginner tutorial'
+
+strM.count('t')
+3
+
+strM.replace("Python", "Machine Learning")
+'Machine Learning beginner tutorial'
+
+# Tuple
+t1=(10,20,30)
+t2=(40,50,60)
+
+# concatenate two tuples
+t1+t2
+(10, 20, 30, 40, 50, 60)
+# repeat the elements 3 times
+t_combine = (10,20,30,40,50,60)
+t_combine*3
+(10, 20, 30, 40, 50, 60, 10, 20, 30, 40, 50, 60, 10, 20, 30, 40, 50, 60)
+# access the 3 rd element
+t_combine[2]
+30
+# access te first three elements
+t_combine[:3]
+(10, 20, 30)
+# access the last three elements
+t_combine[-3:]
+(40, 50, 60)
