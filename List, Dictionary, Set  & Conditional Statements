@@ -1,0 +1,121 @@
+# Create a list with five integer elements
+age_list = [24,25,26,27,28]
+age_list
+[24, 25, 26, 27, 28]
+# Create a list name name_list with five string elements
+name_list = ["Bhagyasree", "Gayathri", "Manjima", "Vyshna", "Mumthaz"]
+name_list
+['Bhagyasree', 'Gayathri', 'Manjima', 'Vyshna', 'Mumthaz']
+# List Modifications
+# Append the string "Yazhini" to name_list
+name_list.append("Yazhini")
+name_list
+['Bhagyasree', 'Gayathri', 'Manjima', 'Vyshna', 'Mumthaz', 'Yazhini']
+# Insert the element 30 at index 2 in age_list
+age_list.insert(2,30)
+age_list
+[24, 25, 30, 26, 27, 28]
+# To remove the string "Yazhini" from name_list
+name_list.remove("Yazhini")
+name_list
+['Bhagyasree', 'Gayathri', 'Manjima', 'Vyshna', 'Mumthaz']
+# Pop the last elemet from age_list
+age_list.pop()
+28
+age_list
+[24, 25, 30, 26, 27]
+# Extend age_list with [29,30,26]
+age_list.extend([29,30,26])
+age_list
+[24, 25, 30, 26, 27, 29, 30, 26]
+# Sort age_list in descending order
+age_list.sort(reverse=True)
+age_list
+[30, 30, 29, 27, 26, 26, 25, 24]
+# Find maximum age,minimum age,and sum of all ages
+("Maximum age:", max(age_list))
+('Maximum age:', 30)
+("Minimum age:", min(age_list))
+('Minimum age:', 24)
+("Sum of all ages:",sum(age_list))
+('Sum of all ages:', 217)
+# 3.Accessing list elements
+# a.Print the first element of name_list
+name_list[0]
+'Bhagyasree'
+# b.Print te last name of name_list
+name_list[-1]
+'Mumthaz'
+# c.Print the elements from idex 2 to index 4 i name_list
+name_list[2:5]
+['Manjima', 'Vyshna', 'Mumthaz']
+# d.Print the elements of name_list in reverse order
+name_list[::-1]
+['Mumthaz', 'Vyshna', 'Manjima', 'Gayathri', 'Bhagyasree']
+# 4.Dictionary(Creation,Modification and Access)
+# Create a dictionary named Student_marks
+student_marks = {
+    "Bhagyasree":78,
+    "Gayathri":69,
+    "Manjima":91,
+    "Vyshna":83,
+    "Mumthaz":74
+}
+student_marks
+{'Bhagyasree': 78, 'Gayathri': 69, 'Manjima': 91, 'Vyshna': 83, 'Mumthaz': 74}
+# b.Access and print the mark of a specific student
+student_marks["Mumthaz"]
+74
+# c.Add a new studet "Janani" with a mark of 80
+student_marks["Janani"] = 80
+studet_marks
+Traceback (most recent call last):
+  File "<pyshell#52>", line 1, in <module>
+    studet_marks
+NameError: name 'studet_marks' is not defined. Did you mean: 'student_marks'?
+student_marks
+{'Bhagyasree': 78, 'Gayathri': 69, 'Manjima': 91, 'Vyshna': 83, 'Mumthaz': 74, 'Janani': 80}
+# d.Update the mark of an older student to 82
+student_marks["Vyshna"] = 82
+student_marks
+{'Bhagyasree': 78, 'Gayathri': 69, 'Manjima': 91, 'Vyshna': 82, 'Mumthaz': 74, 'Janani': 80}
+# e.Use keys(),values(),items() methods
+student_marks.keys()
+dict_keys(['Bhagyasree', 'Gayathri', 'Manjima', 'Vyshna', 'Mumthaz', 'Janani'])
+student_marks.values()
+dict_values([78, 69, 91, 82, 74, 80])
+student_marks.items()
+dict_items([('Bhagyasree', 78), ('Gayathri', 69), ('Manjima', 91), ('Vyshna', 82), ('Mumthaz', 74), ('Janani', 80)])
+# Set and its operations
+# a.Create a set called my_set with values['a','e','i','o','a','a','i']
+my_set = set(['a','e','i','o','u','a','a','i'])
+my_set
+{'i', 'u', 'o', 'a', 'e'}
+#The original collection cotains eight elements.when convert the list into a set using set(), my_set contains only five unique elements.A set stores each        distinct element only once
+# b.Attempt to change my_set[4] = 's'.If an error occurs,explain why.
+my_set[4] = 's'
+Traceback (most recent call last):
+  File "<pyshell#67>", line 1, in <module>
+    my_set[4] = 's'
+TypeError: 'set' object does not support item assignment
+# sets do not suppport indexing or item assignmet.In a set, elements do not have fixed index positions.Therefore my_set[4] = 's' is invalid.The correct method   to add an element is given below
+my_set.add("s")
+my_set
+{'i', 'u', 'o', 'a', 's', 'e'}
+# c.Create two sets: set1 with values {1,3,5,7,9} and set2 with values {2,3,5,8,10}
+set1 = {1,3,5,7,9}
+set2 = {2,3,5,8,10}
+set1
+{1, 3, 5, 7, 9}
+set2
+{2, 3, 5, 8, 10}
+# d.Compute and print the union and intersection of set1 and set2
+union_set = set1.union(set2)
+union_set
+{1, 2, 3, 5, 7, 8, 9, 10}
+union_set = set1|set2
+union_set
+{1, 2, 3, 5, 7, 8, 9, 10}
+intersection_set = set1 & set2
+intersection_set
+{3, 5}
